@@ -1,0 +1,14 @@
+.sh-row{
+    
+    min-height:100vh;
+    margin:20px 0;
+    display: flex;
+}
+.sh-col:first-child{
+    flex: 1;
+    
+
+}.sh-col:last-child{
+    flex: 4;
+    
+}
