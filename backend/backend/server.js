@@ -66,7 +66,7 @@ app.use((err, req, res, next) => {
 
 
 
-mongoose.connect(process.env.MONGODB,
+mongoose.connect("mongodb+srv://socialmedia:ABC12ABC@cluster0.w47dk.mongodb.net/",
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
