@@ -66,11 +66,15 @@ app.use((err, req, res, next) => {
 
 
 
-mongoose.connect("mongodb+srv://socialmedia:ABC12ABC@cluster0.w47dk.mongodb.net/",
-    {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      }).
-    then(()=>app.listen(port,()=>{
-      console.log(`listening on port ${port}`)
-    })).catch((err)=>{console.log(err)});
+mongoose.connect("mongodb+srv://socialmedia:ABC12ABC@cluster0.w47dk.mongodb.net/", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}).then(() => {
+  console.log('Connected to MongoDB');
+  app.listen(port, () => {
+    console.log(`Listening on port ${port}`);
+  });
+}).catch((err) => {
+  console.error('Error connecting to MongoDB:', err);
+});
+
